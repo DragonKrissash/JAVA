@@ -1,17 +1,34 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 public class C1_ArrayList {
     public static void main(String[] args) {
         ArrayList al1 = new ArrayList();
         al1.add(10);
         al1.add(20);
+        al1.add(250);
         System.out.println(al1);
 
-        ArrayList al2 = new ArrayList<>();
-        al2.add("Java");
-        al2.add("Python");
-        al2.add(34);
-        al2.add(1.2);
-        System.out.println(al2);
+        // for (int a = 0; a < al1.size(); a++) {
+        // // Object o = al1.get(a);
+        // System.out.println(al1.get(a));
+        // }
+        // for (Object o : al1) {
+        // System.out.println(o);
+        // }
+
+        int sum = 0;
+        Iterator itr = al1.iterator();
+        while (itr.hasNext()) {
+            Integer a = (Integer) itr.next();
+            sum = sum + a;
+            System.out.println(sum);
+
+        }
+        ListIterator litr = al1.listIterator(al1.size());
+        while (litr.hasPrevious()) {
+            System.out.println(litr.previous());
+        }
     }
 }
