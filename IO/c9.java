@@ -18,19 +18,15 @@ class Cricketer implements Serializable {
         System.out.println("Age: " + age);
         System.out.println("Runs: " + runs);
     }
-
 }
 
-public class c8 {
-    public static void main(String[] args) throws IOException {
-        Cricketer c = new Cricketer("Sachin", 30, 1000);
-        File f = new File("stream_object.txt");
-        f.createNewFile();
-        FileOutputStream fos = new FileOutputStream(f);
-        BufferedOutputStream bos = new BufferedOutputStream(fos);
-        ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(c);
-        oos.flush();
-        oos.close();
+public class c9 {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream("stream_object.txt");
+        BufferedInputStream bis = new BufferedInputStream(fis);
+        ObjectInputStream ois = new ObjectInputStream(bis);
+        Cricketer c = (Cricketer) ois.readObject();
+        c.display();
+        ois.close();
     }
 }
