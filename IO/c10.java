@@ -18,7 +18,7 @@ class Cricketer1 implements Serializable {
 
 public class c10 {
     public static void main(String[] args) throws Exception {
-        Cricketer1 c1 = new Cricketer1("Sachin", 40, 10000);
+        // Cricketer1 c1 = new Cricketer1("Sachin", 40, 10000);
         // File f = new File("ob2_stream.txt");
         // f.createNewFile();
         // FileOutputStream fos = new FileOutputStream(f);
@@ -32,5 +32,6 @@ public class c10 {
         ObjectInputStream ois = new ObjectInputStream(bos);
         Cricketer1 c2 = (Cricketer1) ois.readObject();
         c2.display();
+        ois.close();
     }
 }

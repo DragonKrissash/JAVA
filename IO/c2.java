@@ -7,7 +7,6 @@ public class c2 {
         // dir.mkdir();
         // File f = new File(dir, "pw.txt");
         // f.createNewFile();
-        int c = 0;
         File f = new File("PW");
         String str[] = f.list();
         for (String name : str) {

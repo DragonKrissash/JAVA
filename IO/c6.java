@@ -10,5 +10,6 @@ public class c6 {
             System.out.println(line);
             line = br.readLine();
         }
+        br.close();
     }
 }

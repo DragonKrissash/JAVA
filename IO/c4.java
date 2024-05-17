@@ -14,6 +14,6 @@ public class c4 {
         for (char c : ch) {
             System.out.print(c);
         }
-
+        fr.close();
     }
 }
