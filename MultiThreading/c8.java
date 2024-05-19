@@ -26,13 +26,13 @@ class Library implements Runnable {
         } else {
             try {
                 Thread.sleep(3000);
-                synchronized (res3) {
-                    System.out.println("Student 2 got " + res3);
+                synchronized (res1) {
+                    System.out.println("Student 2 got " + res1);
                     Thread.sleep(3000);
                     synchronized (res2) {
                         System.out.println("Student 2 got " + res2);
                         Thread.sleep(3000);
-                        synchronized (res1) {
+                        synchronized (res3) {
                             System.out.println("Student 2 got " + res3);
                             Thread.sleep(3000);
                         }
